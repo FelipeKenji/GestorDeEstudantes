@@ -93,6 +93,7 @@
             this.textBoxSenha.Name = "textBoxSenha";
             this.textBoxSenha.Size = new System.Drawing.Size(100, 20);
             this.textBoxSenha.TabIndex = 5;
+            this.textBoxSenha.UseSystemPasswordChar = true;
             // 
             // buttonLogin
             // 
@@ -114,6 +115,7 @@
             this.buttonCancelar.TabIndex = 7;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
+            this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // Login_Form
             // 

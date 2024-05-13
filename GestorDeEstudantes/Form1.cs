@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,7 +25,34 @@ namespace GestorDeEstudantes
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            //Criar um objeto da classe "MeuBancoDedados"
+            MeuBancoDeDados meuBancoDeDados = new MeuBancoDeDados();
 
+            MySqlDataAdapter meuAdaptadorSql = new MySqlDataAdapter();
+            DataTable tabelaDeDados = new DataTable();
+            MySqlCommand comandosql = new MySqlCommand("SELECT * FROM `estudantes` WHERE `nome_de_usuário`=@usuario AND `senha`= @senha", meuBancoDeDados.getConexao);
+
+            comandosql.Parameters.Add("@usuario", MySqlDbType.VarChar).Value = textBoxUsuario.Text;
+            comandosql.Parameters.Add("@senha", MySqlDbType.VarChar).Value = textBoxSenha.Text;
+
+            meuAdaptadorSql.SelectCommand = comandosql;
+            
+            meuAdaptadorSql.Fill(tabelaDeDados);
+
+            if(tabelaDeDados.Rows.Count > 0)
+            {
+                MessageBox.Show("SIM");
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou senha inválidos.", "Erro de Login", MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+
+            Close();
         }
     }
 }

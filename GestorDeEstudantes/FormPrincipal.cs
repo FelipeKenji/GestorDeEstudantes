@@ -21,5 +21,11 @@ namespace GestorDeEstudantes
         {
 
         }
+
+        private void novoAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormInserirEstudante formInserirEstudante = new FormInserirEstudante();
+            formInserirEstudante.Show(this);
+        }
     }
 }

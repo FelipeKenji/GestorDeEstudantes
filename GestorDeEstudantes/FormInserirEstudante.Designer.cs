@@ -36,8 +36,8 @@
             this.labelNascimento = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonFeminino = new System.Windows.Forms.RadioButton();
             this.radioButtonMasculino = new System.Windows.Forms.RadioButton();
+            this.radioButtonFeminino = new System.Windows.Forms.RadioButton();
             this.labelTelefone = new System.Windows.Forms.Label();
             this.labelEndereco = new System.Windows.Forms.Label();
             this.labelFoto = new System.Windows.Forms.Label();
@@ -45,7 +45,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonEnviarFoto = new System.Windows.Forms.Button();
-            this.buttonInserir = new System.Windows.Forms.Button();
+            this.buttonCadastrar = new System.Windows.Forms.Button();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,7 +56,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(292, 30);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 30);
+            this.textBox1.Size = new System.Drawing.Size(236, 30);
             this.textBox1.TabIndex = 10;
             // 
             // textBox2
@@ -64,7 +64,7 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(292, 70);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 30);
+            this.textBox2.Size = new System.Drawing.Size(236, 30);
             this.textBox2.TabIndex = 11;
             // 
             // labelNome
@@ -126,17 +126,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // radioButtonFeminino
-            // 
-            this.radioButtonFeminino.AutoSize = true;
-            this.radioButtonFeminino.Location = new System.Drawing.Point(7, 10);
-            this.radioButtonFeminino.Name = "radioButtonFeminino";
-            this.radioButtonFeminino.Size = new System.Drawing.Size(67, 17);
-            this.radioButtonFeminino.TabIndex = 0;
-            this.radioButtonFeminino.TabStop = true;
-            this.radioButtonFeminino.Text = "Feminino";
-            this.radioButtonFeminino.UseVisualStyleBackColor = true;
-            // 
             // radioButtonMasculino
             // 
             this.radioButtonMasculino.AutoSize = true;
@@ -147,6 +136,17 @@
             this.radioButtonMasculino.TabStop = true;
             this.radioButtonMasculino.Text = "Masculino";
             this.radioButtonMasculino.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonFeminino
+            // 
+            this.radioButtonFeminino.AutoSize = true;
+            this.radioButtonFeminino.Location = new System.Drawing.Point(7, 10);
+            this.radioButtonFeminino.Name = "radioButtonFeminino";
+            this.radioButtonFeminino.Size = new System.Drawing.Size(67, 17);
+            this.radioButtonFeminino.TabIndex = 0;
+            this.radioButtonFeminino.TabStop = true;
+            this.radioButtonFeminino.Text = "Feminino";
+            this.radioButtonFeminino.UseVisualStyleBackColor = true;
             // 
             // labelTelefone
             // 
@@ -183,7 +183,7 @@
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.Location = new System.Drawing.Point(293, 227);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(178, 30);
+            this.textBox3.Size = new System.Drawing.Size(235, 30);
             this.textBox3.TabIndex = 22;
             // 
             // textBox4
@@ -191,7 +191,7 @@
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(293, 276);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(178, 30);
+            this.textBox4.Size = new System.Drawing.Size(235, 30);
             this.textBox4.TabIndex = 23;
             // 
             // pictureBox1
@@ -211,14 +211,14 @@
             this.buttonEnviarFoto.Text = "Enviar Foto";
             this.buttonEnviarFoto.UseVisualStyleBackColor = true;
             // 
-            // buttonInserir
+            // buttonCadastrar
             // 
-            this.buttonInserir.Location = new System.Drawing.Point(272, 536);
-            this.buttonInserir.Name = "buttonInserir";
-            this.buttonInserir.Size = new System.Drawing.Size(75, 23);
-            this.buttonInserir.TabIndex = 26;
-            this.buttonInserir.Text = "Inserir";
-            this.buttonInserir.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Location = new System.Drawing.Point(272, 536);
+            this.buttonCadastrar.Name = "buttonCadastrar";
+            this.buttonCadastrar.Size = new System.Drawing.Size(75, 23);
+            this.buttonCadastrar.TabIndex = 26;
+            this.buttonCadastrar.Text = "Cadastrar";
+            this.buttonCadastrar.UseVisualStyleBackColor = true;
             // 
             // buttonCancelar
             // 
@@ -235,7 +235,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.buttonCancelar);
-            this.Controls.Add(this.buttonInserir);
+            this.Controls.Add(this.buttonCadastrar);
             this.Controls.Add(this.buttonEnviarFoto);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox4);
@@ -279,7 +279,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonEnviarFoto;
-        private System.Windows.Forms.Button buttonInserir;
+        private System.Windows.Forms.Button buttonCadastrar;
         private System.Windows.Forms.Button buttonCancelar;
     }
 }
